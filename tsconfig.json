@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": true,                // ✅ Allow .js files
+    "checkJs": false,               // (optional) if you don’t want JS type-checking
+    "outDir": "dist"
+  },
+  "include": ["API/**/*"],
+  "exclude": ["node_modules"]
+}
