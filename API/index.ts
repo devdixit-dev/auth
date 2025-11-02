@@ -4,6 +4,8 @@ import 'dotenv/config';
 import connectDB from './configs/database';
 import cookieParser from 'cookie-parser';
 import AuthRouter from './routes/auth';
+import UserRouter from './routes/user';
+import isAuth from './middlewares/isAuth';
 
 const app = express();
 connectDB();
@@ -12,6 +14,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use('/api/auth', AuthRouter);
+app.use('/api/user', isAuth, UserRouter);
 
 app.use((req, res, next) => {
   console.log(`${req.url} - ${req.method} - ${req.ip}`);

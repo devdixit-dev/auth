@@ -6,9 +6,9 @@ const isAuth = async(req: Request, res: Response, next: NextFunction) => {
     const token = req.cookies.a_token;
 
     if(!token) {
-      return res.status(403).json({
+      return res.status(401).json({
         success: false,
-        message: "Token not available"
+        message: "No token provided"
       });
     }
 
