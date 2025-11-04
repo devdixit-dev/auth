@@ -33,3 +33,5 @@ app.get('/', (_, res) => {
 app.listen(3000, () => {
   console.log(`System is up and running at http://localhost:3000 🚀`);
 });
+
+export default app;

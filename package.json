@@ -1,14 +1,14 @@
 {
   "name": "auth-system",
-  "module": "index.ts",
+  "module": "app.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
     "@types/bun": "latest"
   },
   "scripts": {
-    "start": "bun run API/index.ts",
-    "dev": "bun --watch run API/index.ts"
+    "start": "ts-node src/app.ts",
+    "dev": "bun --watch run src/app.ts"
   },
   "peerDependencies": {
     "typescript": "^5"
