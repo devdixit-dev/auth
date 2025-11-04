@@ -10,7 +10,7 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "start": "ts-node dist/app.js",
+    "start": "npm run ",
     "dev": "bun --watch run src/app.ts",
     "build": "tsc"
   },
