@@ -20,7 +20,7 @@ export const AuthRegister = async(req: Request, res: Response) => {
     const hashPassword = await bcrypt.hash(password, 12);
 
     const data = await User.create({
-      name, email, password: hashPassword
+      name, email, password: hashPassword, otp: 123456
     });
 
     return res.status(200).json({
@@ -50,8 +50,11 @@ export const AuthVerify = async(req: Request, res: Response) => {
       });
     }
 
-    const findUser = await User.findById(user.userId).lean();
-
+    const findUser = await User.findById(user.userId);
+    // console.log(findUser)
+    // console.log(otp)
+    // console.log(findUser?.otp)
+    // console.log(otp !== findUser?.otp)
     if(otp !== findUser?.otp) {
       return res.status(403).json({
         success: false,

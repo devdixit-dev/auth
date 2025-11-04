@@ -1,14 +1,14 @@
 import { Router } from "express";
 
 import { validate } from "../middlewares/validator";
-import { RegisterSchema, VerifySchema, SignInSchema } from "../validators/user";
+import { RegisterSchema, VerifySchema, SignInSchema } from "../validators/auth";
 
 import { AuthLogout, AuthRegister, AuthSignIn, AuthVerify } from "../controllers/auth";
 import isAuth from "../middlewares/isAuth";
 
 const AuthRouter = Router();
 
-AuthRouter.get('/register', validate(RegisterSchema), AuthRegister);
+AuthRouter.post('/register', validate(RegisterSchema), AuthRegister);
 
 AuthRouter.post('/verify', isAuth, validate(VerifySchema), AuthVerify);
 

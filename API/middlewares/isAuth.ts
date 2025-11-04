@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from "express";
 import { verifyJwt } from "../services/jwt";
+import User from "../models/user";
 
 const isAuth = async(req: Request, res: Response, next: NextFunction) => {
   try{

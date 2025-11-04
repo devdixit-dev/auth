@@ -19,7 +19,7 @@ export const verifyJwt = (payload: any) => {
     const secret = process.env.JWT_SECRET;
     if(!secret) return null;
 
-    const decodedToken = jwt.sign(payload, secret, { expiresIn: '30m' });
+    const decodedToken = jwt.verify(payload, secret);
     return decodedToken;
   }
   catch(e) {

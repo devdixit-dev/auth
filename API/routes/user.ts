@@ -6,8 +6,8 @@ const UserRouter = Router();
 
 UserRouter.get('/me', UserProfile);
 
-UserRouter.get('update/me', UserUpdate);
+UserRouter.put('/update/me', UserUpdate);
 
-UserRouter.get('remove/me', UserRemove);
+UserRouter.delete('/remove/me', UserRemove);
 
 export default UserRouter;
