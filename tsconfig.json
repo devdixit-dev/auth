@@ -11,6 +11,6 @@
     "checkJs": false,               // (optional) if you don’t want JS type-checking
     "outDir": "dist"
   },
-  "include": ["API/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
