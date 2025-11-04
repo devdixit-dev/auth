@@ -1,4 +1,4 @@
-# 🚀 Authentication API (Express + TypeScript + Vercel)
+# 🚀 Authentication API (Express + TypeScript + Render)
 
 A high-performance REST API built using **Express.js**, **TypeScript**, and **Zod** for input validation.  
 Deployed on **Vercel** with a focus on scalability, speed, and clean architecture.
